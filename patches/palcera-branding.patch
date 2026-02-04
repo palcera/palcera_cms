@@ -1,0 +1,15 @@
+diff --git a/web/profiles/drupal_cms_installer/theme/templates/install-page.html.twig b/web/profiles/drupal_cms_installer/theme/templates/install-page.html.twig
+index 1234567..abcdefg 100644
+--- a/web/profiles/drupal_cms_installer/theme/templates/install-page.html.twig
++++ b/web/profiles/drupal_cms_installer/theme/templates/install-page.html.twig
+@@ -12,7 +12,9 @@
+ <div class="cms-installer">
+   <header class="cms-installer__header">
+     <h1 class="cms-installer__heading">
+-      <img src="{{ theme_path }}/images/drupal-cms-logo.svg" alt="{{ 'Drupal CMS'|t }}" />
++      <img src="{{ theme_path }}/images/palcera-logo.svg" alt="{{ 'Palcera CMS'|t }}" class="palcera-logo" />
++      <span class="cms-installer__powered-by">powered by</span>
++      <img src="{{ theme_path }}/images/drupal-cms-logo.svg" alt="{{ 'Drupal CMS'|t }}" class="drupal-cms-logo" />
+     </h1>
+     {% if languages %}
+      <div class="select-wrapper">
