@@ -1,6 +1,6 @@
 {
     "name": "palcera/palcera_cms",
-    "version": "1.0.0-alpha1",
+    "version": "1.0.0-alpha2",
     "description": "Palcera CMS - Drupal CMS extended with Schema.org, AI-ready content, and enhanced security.",
     "type": "project",
     "license": "GPL-2.0-or-later",
@@ -70,5 +70,16 @@
         "drupal-core-vendor-hardening": {
             "composer/composer": false
         }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@symlink-installer-profile"
+        ],
+        "post-update-cmd": [
+            "@symlink-installer-profile"
+        ],
+        "symlink-installer-profile": [
+            "[ -L web/profiles/drupal_cms_installer ] || ln -sf ../../vendor/drupal/cms/web/profiles/drupal_cms_installer web/profiles/drupal_cms_installer"
+        ]
     }
 }
