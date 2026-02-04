@@ -1,3 +1,16 @@
+diff --git a/web/profiles/drupal_cms_installer/drupal_cms_installer.info.yml b/web/profiles/drupal_cms_installer/drupal_cms_installer.info.yml
+index 1234567..abcdefg 100644
+--- a/web/profiles/drupal_cms_installer/drupal_cms_installer.info.yml
++++ b/web/profiles/drupal_cms_installer/drupal_cms_installer.info.yml
+@@ -5,7 +5,7 @@ description: 'Provides install-time tweaks for Drupal CMS. Not to be used in pro
+
+ # Use the `distribution` key to skip the installer's profile selection step.
+ distribution:
+-  name: Drupal CMS
++  name: Palcera CMS
+   install:
+     theme: drupal_cms_installer_theme
+
 diff --git a/web/profiles/drupal_cms_installer/theme/templates/install-page.html.twig b/web/profiles/drupal_cms_installer/theme/templates/install-page.html.twig
 index 1234567..abcdefg 100644
 --- a/web/profiles/drupal_cms_installer/theme/templates/install-page.html.twig
@@ -7,9 +20,9 @@ index 1234567..abcdefg 100644
    <header class="cms-installer__header">
      <h1 class="cms-installer__heading">
 -      <img src="{{ theme_path }}/images/drupal-cms-logo.svg" alt="{{ 'Drupal CMS'|t }}" />
-+      <img src="{{ theme_path }}/images/palcera-logo.svg" alt="{{ 'Palcera CMS'|t }}" class="palcera-logo" />
-+      <span class="cms-installer__powered-by">powered by</span>
-+      <img src="{{ theme_path }}/images/drupal-cms-logo.svg" alt="{{ 'Drupal CMS'|t }}" class="drupal-cms-logo" />
++      <img src="{{ theme_path }}/images/palcera-logo.svg" alt="{{ 'Palcera CMS'|t }}" style="height: 50px; width: auto;" />
++      <span style="margin: 0 0.5rem; font-size: 0.875rem; font-weight: 400; color: #6D7583;">powered by</span>
++      <img src="{{ theme_path }}/images/drupal-cms-logo.svg" alt="{{ 'Drupal CMS'|t }}" />
      </h1>
      {% if languages %}
       <div class="select-wrapper">
