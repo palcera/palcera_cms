@@ -1,6 +1,5 @@
 {
     "name": "palcera/palcera_cms",
-    "version": "1.0.0-alpha4",
     "description": "Palcera CMS - Drupal CMS extended with Schema.org, AI-ready content, and enhanced security.",
     "type": "project",
     "license": "GPL-2.0-or-later",
