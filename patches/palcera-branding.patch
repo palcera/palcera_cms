@@ -11,6 +11,33 @@ index 1234567..abcdefg 100644
    install:
      theme: drupal_cms_installer_theme
 
+@@ -21,7 +21,7 @@ recipes:
+
+   # The recipes to apply if the user doesn't choose a site template.
+   default:
+-    - drupal/drupal_cms_starter
++    - palcera/palcera_base
+
+ # Explicitly provide an empty list of themes -- this prevents the installer from
+ # injecting Stark into it.
+diff --git a/web/profiles/drupal_cms_installer/theme/drupal_cms_installer_theme.theme b/web/profiles/drupal_cms_installer/theme/drupal_cms_installer_theme.theme
+index 1234567..abcdefg 100644
+--- a/web/profiles/drupal_cms_installer/theme/drupal_cms_installer_theme.theme
++++ b/web/profiles/drupal_cms_installer/theme/drupal_cms_installer_theme.theme
+@@ -81,10 +81,10 @@ function drupal_cms_installer_theme_form_alter(array &$form, FormStateInterface
+   $form['add_ons'] += [
+     '#prefix' => '<div class="cms-installer__form-group">',
+     '#suffix' => '</div>',
+-    '#default_value' => 'drupal_cms_starter',
++    '#default_value' => 'palcera_base',
+   ];
+-  // Put the drupal_cms_starter template before the others.
+-  $form['add_ons']['drupal_cms_starter']['#weight'] = -100;
++  // Put the palcera_base template before the others.
++  $form['add_ons']['palcera_base']['#weight'] = -100;
+   $form['add_ons']['#required'] = TRUE;
+
+   $form['actions']['submit']['#attributes']['class'] = ['button--next'];
 diff --git a/web/profiles/drupal_cms_installer/theme/templates/install-page.html.twig b/web/profiles/drupal_cms_installer/theme/templates/install-page.html.twig
 index 1234567..abcdefg 100644
 --- a/web/profiles/drupal_cms_installer/theme/templates/install-page.html.twig
