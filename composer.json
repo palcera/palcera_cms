@@ -12,7 +12,8 @@
     },
     "require": {
         "cweagans/composer-patches": "^2.0",
-        "drupal/cms": "^2.0",
+        "drupal/cms": "^2.1",
+        "drupal/drupal_cms_site_template_base": "^1@dev",
         "drush/drush": "^13.7",
         "palcera/palcera_base": "^1.0"
     },
@@ -32,7 +33,9 @@
             "drupal/core-project-message": true,
             "drupal/core-recipe-unpack": true,
             "drupal/core-vendor-hardening": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "symfony/runtime": true,
+            "drupal/site_template_helper": true
         },
         "bin-dir": "vendor/bin",
         "sort-packages": true,
@@ -70,23 +73,6 @@
         },
         "drupal-core-vendor-hardening": {
             "composer/composer": false
-        },
-        "patches": {
-            "drupal/cms": {
-                "Add Palcera branding to installer": "patches/palcera-branding.patch"
-            }
         }
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "@setup-installer-profile"
-        ],
-        "post-update-cmd": [
-            "@setup-installer-profile"
-        ],
-        "setup-installer-profile": [
-            "[ -L web/profiles/drupal_cms_installer ] || ln -sf ../../vendor/drupal/cms/web/profiles/drupal_cms_installer web/profiles/drupal_cms_installer",
-            "cp assets/palcera-logo.svg vendor/drupal/cms/web/profiles/drupal_cms_installer/theme/images/"
-        ]
     }
 }
